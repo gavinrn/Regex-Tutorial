@@ -13,9 +13,9 @@ let str = "hello world hello";
 let matches = str.match(pattern);
 console.log(matches); // prints ["hello", "hello"] to the console.
 ```
-The pattern we are searching for is *hello*
-The deffinition of the regular expression is */hello/*
-The **g** is a modifier that says check for the pattern globally
+The pattern we are searching for is *hello*.
+ The deffinition of the regular expression is */hello/*.
+ The **g** is a modifier that says check for the pattern globally.
 
 Every Regualr expression in javascript follows this syntax **/pattern/modifier(s);**
 
