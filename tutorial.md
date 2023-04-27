@@ -13,8 +13,7 @@ let str = "hello world hello";
 let matches = str.match(pattern);
 console.log(matches); // prints ["hello", "hello"] to the console.
 ```
-The regular expression variable we created called *pattern*, goes inside the str.match() function. I then told javascript I would like you to find all the matches
-of a given *pattern*, store them in a variable then print the variable to console. 
+The two **/***insert pattern***/**
 
 
 ## Table of Contents
@@ -34,6 +33,7 @@ of a given *pattern*, store them in a variable then print the variable to consol
 ## Regex Components
 
 ### Anchors
+
 
 ### Quantifiers
 
