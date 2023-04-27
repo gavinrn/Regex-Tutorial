@@ -1,10 +1,18 @@
-# Title (replace with your title)
+# Regular Expression Tutorial
 
-Introductory paragraph (replace this with your text)
+Hi my name is Gavin and this is my regular expression tutorial. What is a regular expression? Essentialy it is a filter that is imposed on a given string or dataset to find information. 
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+For these examples we will be using the Javascript programming languages, howerver the concpet of regular expressions is not limited to javascript. In fact, lanagues such as Perl, Python, Ruby, Java, .NET, and many more languages have their forms of regular expressions. 
+
+**An example of a regular expression**
+```
+let str = "hello world hello";
+let matches = str.match(/hello/g);
+console.log(matches); // ["hello", "hello"]
+```
+
 
 ## Table of Contents
 
