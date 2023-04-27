@@ -38,6 +38,7 @@ Every Regualr expression in javascript follows this syntax **/pattern/modifier(s
 
 ### Anchors
 
+When you think of an anchor, you think of a big hunk of metal that helps the ship *stop*, once the ship is in place. Anchors in the context of regular expressions are similar. Using the ```^``` and ```$``` starting and stoping symbols respectively, you can search large sets of string and filter out words that can begin or end with a given patern.
 
 ### Quantifiers
 
