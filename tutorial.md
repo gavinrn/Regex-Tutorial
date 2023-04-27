@@ -8,10 +8,13 @@ For these examples we will be using the Javascript programming languages, howerv
 
 **An example of a regular expression**
 ```
+let pattern = /hello/g;
 let str = "hello world hello";
-let matches = str.match(/hello/g);
-console.log(matches); // ["hello", "hello"]
+let matches = str.match(pattern);
+console.log(matches); // prints ["hello", "hello"] to the console.
 ```
+The regular expression variable we created called pattern, goes inside the str.match() function. I told javascript that given this pattern, I would like you to find all the matches
+of a given *pattern*, store them in a variable then print the variable to console. 
 
 
 ## Table of Contents
