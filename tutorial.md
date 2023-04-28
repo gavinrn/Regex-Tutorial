@@ -120,9 +120,10 @@ let string = "The quick brown fox jumps over the lazy dog"
 
 result = string.match(regex);
 console.log(result); // returns all the vowels in the string
-
+```
 ### Flags
-I've been using flags the whole time but here is the demo. There are a few different types of flags but the most common ones are the ones I have used already. the ```g``` flag means global, meaning that scan the entire string. There has also been another one the ```m``` flag which mean multi line.
+I've been using flags the whole time but here is the demo. There are a few different types of flags but the most common ones are the ones I have used already. the ```g``` flag means global, 
+meaning that scan the entire string. There has also been another one the ```m``` flag which mean multi line.
 ```
 let string = `
 Marry Jane
@@ -137,14 +138,18 @@ Jane Lennon
 `;
 let regex = /Smith$/gm;
 ```
-In this previous example we were trying to find how many people had the last name Smith, but in order to fufil that requirement, I had to use two flags both ```g``` and ```m```. I stated that I want you to search **globaly** for the Smith last name, and I want you to check **every line**. There is also the ```i``` flag which basically makes it so that the regular expression is case-insensitive. There are more flags but these are the most common ones.
+In this previous example we were trying to find how many people had the last name Smith, but in order to fufil that requirement, I had to use two flags both ```g``` and ```m```. 
+I stated that I want you to search **globaly** for the Smith last name, and I want you to check **every line**. 
+There is also the ```i``` flag which basically makes it so that the regular expression is case-insensitive. There are more flags but these are the most common ones.
 
 ### Grouping and Capturing
 When talking about Grouping and Capturing it is refering to specific parts of a pattern. The syntax for grouping and capturing is ```()``` parentheses.
 ```
 let regex = /(\d{3})-(\d{3})-(\d{4})/; // Phone number format 000-000-0000
 ```
-Ok that's a lot, let disect it. The first part of the code is is just the declaration ```/ /``` then we move on to our first part ```\d{3}```. ```\d``` is refering to a digit. So we are telling the compiler that we want a digit, the ```{3}``` is a quantifier, meaning that we want 3 digits and only 3 digits. Then there is a dash in the code, followed by a second grouping of 3 digits, a dash, and then a grouping of 4 digits, represeting the format of a phone number.
+Ok that's a lot, let disect it. The first part of the code is is just the declaration ```/ /``` then we move on to our first part ```\d{3}```. ```\d``` is refering to a digit. 
+So we are telling the compiler that we want a digit, the ```{3}``` is a quantifier, meaning that we want 3 digits and only 3 digits. 
+Then there is a dash in the code, followed by a second grouping of 3 digits, a dash, and then a grouping of 4 digits, represeting the format of a phone number.
 
 ### Bracket Expressions
 Here is where things can get a little confusing. Charecter Classes are also commonly refered to as Bracket Expressions. The syntax is ```[]``` closed brackets. Let's use a slighty differnt version of the previous charecter class example.
@@ -157,7 +162,12 @@ console.log(result); // returns all the charecters that are not vowels in the st
 ```
 As you can see the syntax and concept is basically the same, however you can also use the ```^``` char inside of the bracket do indicate that you don't want the following charecters in your regular expression.
 ### Greedy and Lazy Match
-Greedy and Lazy Match are both terms used to the methods in which the information from regular expressions is being handeled. The most common way is Greedy, meaning that you are trying to find the most matches as possible given the circumstances provided in your regular expression. The symbols associated with these styles of regular expressions are commonly denoted as ```+``` meaning greedy and ```?``` meaning lazy. You could write an expression like ```/A\d.+/``` which would mean that your regular expression is going to find a capital A and any length of numbers preceeding it, and return all the numbers regardless of the length, hence it being greedy. However if you were to write ```/A\d.+?/``` it is looking for a lazy way to do things, so it will return the absolute minimum. It will return a capital A, a digit, and any char. Those are the only requirements hence they are lazy. 
+Greedy and Lazy Match are both terms used to the methods in which the information from regular expressions is being handeled. 
+The most common way is Greedy, meaning that you are trying to find the most matches as possible given the circumstances provided in your regular expression. 
+The symbols associated with these styles of regular expressions are commonly denoted as ```+``` meaning greedy and ```?``` meaning lazy. 
+You could write an expression like ```/A\d.+/``` which would mean that your regular expression is going to find a capital A and any length of numbers preceeding it, and return all the numbers regardless of the length, hence it being greedy. 
+However if you were to write ```/A\d.+?/``` it is looking for a lazy way to do things, so it will return the absolute minimum. 
+It will return a capital A, a digit, and any char. Those are the only requirements hence they are lazy. 
 
 ### Boundaries
 Generally boudaries are just to specify what you are looking for in regular expressions. An example of of boudary in a regular expression would be ```/\bthe\b/``` meaning that we set a boundary on the. It is the most specific type of boundary as it will only return the no acceptions. While a more lose type of boundary would be the captial B ```/\Bthe\b/``` meaning that it would return someting like "other" because it contain the word the inside of it. 
@@ -175,12 +185,17 @@ console.log(regex.test(str2)); // false
 You could use a back reference to check if the expression that was just referenced shows up again
 
 ### Look-ahead and Look-behind
-This is probably the most advanced regex expression, it is basically when you take a regular expression, then looks ahead or behind for another given regular expression, and given the expression could be tasked at either looking if something is there, or if something is not there. Here is an example 
+This is probably the most advanced regex expression, it is basically when you take a regular expression,
+then looks ahead or behind for another given regular expression, and given the expression could be tasked at either looking if something is there, 
+or if something is not there. Here is an example 
 ```
 /Note(?=Book)/
 ```
-This regular expression is only going to look for Note if it is imediately followed by *book*. There are 4 different version of the look-ahead or look-behind. There is a look-ahead positive and negative, meaning that you can look for things that are there or not there, hence they are postive and negative, the same applies for looking behind. 
+This regular expression is only going to look for Note if it is imediately followed by *book*. There are 4 different version of the look-ahead or look-behind. 
+There is a look-ahead positive and negative, meaning that you can look for things that are there or not there, 
+hence they are postive and negative, the same applies for looking behind. 
 
 ## Author
 
-Hello I'm Gavin and this is my Javascript Regular Expression tutorial, I hope you found it to be somewhat helpful. Here is my github [gavinrn](www.github.com/gavinrn)
+Hello I'm Gavin and this is my Javascript Regular Expression tutorial, 
+I hope you found it to be somewhat helpful. Here is my github [gavinrn](www.github.com/gavinrn)
