@@ -38,11 +38,34 @@ Every Regualr expression in javascript follows this syntax **/pattern/modifier(s
 
 ### Anchors
 
-When you think of an anchor, you think of a big hunk of metal that helps the ship *stop*, once the ship is in place. Anchors in the context of regular expressions are similar. Using the ```^``` and ```$``` starting and stoping symbols respectively, you can search large sets of string and filter out words that can begin or end with a given patern.
+When you think of an anchor, you think of a big hunk of metal that helps the ship *stop*, once the ship is in place. Anchors in the context of regular expressions are similar. 
+```
+let pattern = /^anchor/gm;
+let str = `water
+water
+water
+anchorHere
+dontanchor`;
+let matches = str.match(pattern);
+let index = str.search(pattern);
+console.log(index); // 18
+console.log(matches); // [ 'anchor' ] note that we are using a templete literal not a string
+```
+
+Using the ```^``` and ```$``` starting and stoping symbols respectively, you can search large sets of string and filter out words that can begin or end with a given patern. 
+
 
 ### Quantifiers
+Generally speaking, when you are talking about quantifers you are refering to the quantity of preceding charecters with respect to the pattern. A little unintuitive admitingly, but if you were to for example want to measure the *number* of charecters in a string you would use a quantifier. 
+```
+const  = "REEE REEEEEEEEEEEE REE REEEEE EEEE";
+const RegExp = /RE{4,}/g; // Notice how I didn't enclose the *RE* in parenthese because we're only measuring the E
+console.log(scream.match(RegExp)); // Returns [ 'REEEEEEEEEEEE', 'REEEEE' ]
+```
+An interesting point is that given the string and the RegExp, it check for a R and 4 OR MORE E's. The {4,} (I'll call it the 4 or more Quantifier) is an example of how you would go about trying to find duplicate charecters for a given array. 
 
 ### OR Operator
+
 
 ### Character Classes
 
