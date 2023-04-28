@@ -198,4 +198,4 @@ hence they are postive and negative, the same applies for looking behind.
 ## Author
 
 Hello I'm Gavin and this is my Javascript Regular Expression tutorial, 
-I hope you found it to be somewhat helpful. Here is my github [gavinrn](www.github.com/gavinrn)
+I hope you found it to be somewhat helpful. Here is my github [gavinrn](https://www.github.com/gavinrn)
