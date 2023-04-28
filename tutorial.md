@@ -38,21 +38,41 @@ Every Regualr expression in javascript follows this syntax **/pattern/modifier(s
 
 ### Anchors
 
-When you think of an anchor, you think of a big hunk of metal that helps the ship *stop*, once the ship is in place. Anchors in the context of regular expressions are similar. 
+An Anchor is essentially a way to find information with respect to either the **start-of-the-line** or the **end-of-the-line**. I'm going a list of names and store them as a template literal.
 ```
-let pattern = /^anchor/gm;
-let str = `water
-water
-water
-anchorHere
-dontanchor`;
-let matches = str.match(pattern);
-let index = str.search(pattern);
-console.log(index); // 18
-console.log(matches); // [ 'anchor' ] note that we are using a templete literal not a string
+let string = `
+Marry Jane
+John Doe
+Jane Doe
+John Smith
+Jane Smith
+John Wayne
+Jane Wayne
+John Lennon
+Jane Lennon
+`;
 ```
+Here is a list of names, it could be any length but I don't want to display a list that is 10,000 lines long. I want to know how many People are in the Smith family, and I want to know how many people have the first name John in this list, how would I go about getting that information given the string. 
+```
+let regex = /Smith$/gm;
+```
+Voilà, I have created a regular expression *"filter"* that looks for a line that ends with **Smith** our given last name that I am looking for. 
+```
+let result = string.match(regex);
+console.log(result); // returns [ 'Smith', 'Smith' ]
+```
+I have now figured out that there are two Smiths in the list. Now I will try and find out how many Johns there are on the list 
+```
+let RegExp = /^John/gm;
+```
+Creating my regular expression *"filter"*
+```
+let result2 = string.match(RegExp);
+console.log(result2); // return [ 'John', 'John', 'John', 'John' ]
+```
+I have now determined that there are 4 Johns inside the given string list.
 
-Using the ```^``` and ```$``` starting and stoping symbols respectively, you can search large sets of string and filter out words that can begin or end with a given patern. 
+The key takeaway here being that the ```^``` and ```$``` starting and stoping symbols respectively, you can search large sets of string and filter out words that can begin or end with a given pattern. 
 
 
 ### Quantifiers
